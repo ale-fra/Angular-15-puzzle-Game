@@ -2,19 +2,19 @@
 <html ng-app="puzzle">
 <head>
     <title>Angular Test Puzzle</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
     <script src="scripts/controllers/number.js"></script>
     <link href="styles/bootstrap.css" rel="stylesheet">
     <link href="styles/basic.css" rel="stylesheet">
 </head>
 
-<body>
-<div class="container"  ng-controller="NumberCtrl">
+<body   ng-controller="NumberCtrl" ng-keydown="shortCut($event)">
+<div class="container"  >
 
     <div class="row board board-{{size}}" ng-init="randomize()">
         <div ng-repeat="piece in board">
-            <div class="piece piece-number piece-number-{{piece.value}}" ng-click="pieceClick($index)" ng-class="piece.color" >
-                <span ng-hide="pieceEmpty($index)">{{piece.value}}</span></div>
+            <div ng-hide="{{piece.value}}==0" class="piece piece-number piece-position-{{piece.position}}" ng-click="pieceClick(piece.position)" ng-class="{rightPosition : piece.position  ==(piece.value -1 )}" >
+                <span  >{{piece.value}}</span></div>
         </div>
     </div>
 
@@ -26,8 +26,16 @@
         <div class="alert alert-info" ng-hide="finished()">Time: {{counter | number}} seconds</div>
         <div class="alert alert-success" ng-show="finished()">Game Finished! in {{counter | number}} seconds!!!</div>
     </div>
-
+    <pre>{{board | json}}</pre>
 </div>
+
+
+
+
+
 </body>
 
 </html>
+
+
+
