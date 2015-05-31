@@ -121,3 +121,90 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+
+
+@media only screen and (max-device-width: 480px) {
+
+
+.piece-position-0 {
+  left: -2px;
+  top: -2px;
+}
+.piece-position-1 {
+  left: 25vw;
+  top: -2px;
+}
+.piece-position-2 {
+  left: 50vw;
+  top: -2px;
+}
+.piece-position-3 {
+  left: 75vw;
+  top: -2px;
+}
+.piece-position-4 {
+  left: -2px;
+  top: 25vw;
+}
+.piece-position-5 {
+  left: 25vw;
+  top: 25vw;
+}
+.piece-position-6 {
+  left: 50vw;
+  top: 25vw;
+}
+.piece-position-7 {
+  left: 75vw;
+  top: 25vw;
+}
+.piece-position-8 {
+  left: -2px;
+  top: 50vw;
+}
+.piece-position-9 {
+  left: 25vw;
+  top: 50vw;
+}
+.piece-position-10 {
+  left: 50vw;
+  top: 50vw;
+}
+.piece-position-11 {
+  left: 75vw;
+  top: 50vw;
+}
+.piece-position-12 {
+  left: -2px;
+  top: 75vw;
+}
+.piece-position-13 {
+  left: 25vw;
+  top: 75vw;
+}
+.piece-position-14 {
+  left: 50vw;
+  top: 75vw;
+}
+.piece-position-15 {
+  left: 75vw;
+  top: 75vw;
+}
+
+.container {
+  width: 100vw;
+}
+.piece {
+  width: 24vw;
+  height: 24vw;
+
+  padding: 0.5vw;
+}
+
+.board {
+  width: 100vw !important;
+  height: 100vw  !important;
+  margin: 0;
+}
+	}
