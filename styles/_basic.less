@@ -1,0 +1,177 @@
+.Board(@x){
+  width: @x * 80px;
+  height: @x * 80px;
+}
+.Piece-position(@x,@y){
+  left : (-2 + @x * 81px);
+  top : (-2 + @y * 81px);
+}
+.Translate-effect(){
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.Unselectable (){
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container {
+  width: 500px;
+}
+
+.controls {
+  margin-bottom: 18px;
+  margin-top: 18px;
+}
+//
+//.piece-1 {
+//  background-color: #000;
+//}
+//
+//.piece-1:hover {
+//  background-color: #666;
+//}
+//
+//.piece-0 {
+//  background-color: #FFF;
+//}
+//
+//.piece-0:hover {
+//  background-color: #CCC;
+//}
+//
+.piece-number {
+  width: 68px;
+  height: 68px;
+  line-height: 70px;
+  font-size: 2em;
+  text-align: center;
+  border: 1px solid #222;
+  /* -webkit-border-radius: 10px; */
+  /*-moz-border-radius: 10px;*/
+  /* border-radius: 10px; */
+}
+//
+//.piece-number-0 {
+//  border: 1px solid #000;
+//  color: #FFF;
+//  content: "";
+//}
+//
+//.piece-number:hover {
+//  background-color: #DEDEDE;
+//}
+//
+//.piece-number-0:hover {
+//  background-color: white !important;
+//  cursor: initial;
+//}
+
+
+
+.board {
+  position: relative;
+  border: 3px solid Black;
+  margin-bottom: 4px;
+}
+
+.board-2 {
+  .Board(2);
+}
+
+.board-3 {
+  .Board(3);
+}
+
+.board-4 {
+.Board(4);
+}
+
+.board-5 {
+  .Board(5);
+
+}
+
+
+.rightPosition{
+  background-color: rgba(147, 229, 147, 0.33);
+}
+
+
+.piece-position-0{
+  .Piece-position(0,0);
+}
+.piece-position-1{
+  .Piece-position(1,0);
+}
+.piece-position-2{
+  .Piece-position(2,0);
+
+}
+.piece-position-3{
+  .Piece-position(3,0);
+
+}
+.piece-position-4{
+  .Piece-position(0,1);
+
+}
+.piece-position-5{
+  .Piece-position(1,1);
+
+}
+.piece-position-6{
+  .Piece-position(2,1);
+
+}
+.piece-position-7{
+  .Piece-position(3,1);
+
+}
+.piece-position-8{
+  .Piece-position(0,2);
+
+}
+.piece-position-9{
+  .Piece-position(1,2);
+
+}
+.piece-position-10{
+  .Piece-position(2,2);
+
+}
+.piece-position-11{
+  .Piece-position(3,2);
+
+}
+.piece-position-12{
+  .Piece-position(0,3);
+
+}
+.piece-position-13{
+  .Piece-position(1,3);
+
+}
+.piece-position-14{
+  .Piece-position(2,3);
+}
+.piece-position-15{
+  .Piece-position(3,3);
+}
+
+
+
+.piece{
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  .Translate-effect();
+  .Unselectable();
+}

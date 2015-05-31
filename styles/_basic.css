@@ -1,0 +1,111 @@
+.piece {
+    float: left;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.container {
+    width: 500px;
+}
+
+.controls {
+    margin-bottom: 18px;
+    margin-top: 18px;
+}
+
+.piece-1 {
+    background-color: #000;
+}
+
+.piece-1:hover {
+    background-color: #666;
+}
+
+.piece-0 {
+    background-color: #FFF;
+}
+
+.piece-0:hover {
+    background-color: #CCC;
+}
+
+.piece-number {
+    width: 68px;
+    height: 68px;
+    line-height: 70px;
+    font-size: 2em;
+    text-align: center;
+    border: 1px solid #222;
+    /* -webkit-border-radius: 10px; */
+    /*-moz-border-radius: 10px;*/
+    /* border-radius: 10px; */
+}
+
+.piece-number-0 {
+    border: 1px solid #000;
+    color: #FFF;
+    content: "";
+}
+
+.piece-number:hover {
+    background-color: #DEDEDE;
+}
+
+.piece-number-0:hover {
+    background-color: white !important;
+    cursor: initial;
+}
+
+
+.board {
+    border: 3px solid Black;
+    margin-bottom: 4px;
+}
+
+.board-2 {
+    max-width: 160px;
+}
+
+.board-3 {
+    max-width: 240px;
+}
+
+.board-4 {
+    max-width: 320px;
+}
+
+.board-5 {
+    max-width: 400px;
+}
+
+
+.rightPosition{
+    background-color: rgba(147, 229, 147, 0.33);
+}
+
+.Piece-position-1{}
+.Piece-position-2{}
+.Piece-position-3{}
+.Piece-position-4{}
+.Piece-position-5{}
+.Piece-position-6{}
+.Piece-position-7{}
+.Piece-position-8{}
+.Piece-position-9{}
+.Piece-position-10{}
+.Piece-position-11{}
+.Piece-position-12{}
+.Piece-position-13{}
+.Piece-position-14{}
+.Piece-position-15{}
+
+
+.Piece{
+    float: left;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    padding: 5px;
+}
