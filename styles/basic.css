@@ -1,8 +1,4 @@
 body{
-    overflow-Y: hidden;
-}
-
-.container {
     width: 500px;
 }
 
@@ -256,4 +252,23 @@ body{
         height: 100vw !important;
         margin: 0;
     }
+
+    .controls{
+        width: 100%;
+    }
+    .controls button {
+        width: 30vw;
+        height: 10vw;
+        font-size: 5vw !important;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .status-bar .alert{
+        height: 15vw;
+        font-size: 10vw;
+        line-height: 15vw;
+        text-align: center;
+    }
 }
+
