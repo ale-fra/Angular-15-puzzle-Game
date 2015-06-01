@@ -1,14 +1,11 @@
-angular.module('puzzle', ['swipe'])
-    //.config(function (hammerDefaultOptsProvider) {
-    //    hammerDefaultOptsProvider.set({
-    //        recognizers: [
-    //            [Hammer.Tap,{ event: 'tap'}],
-    //            [Hammer.Tap, { event: 'doubletap', taps: 2 }, [], ['tap']],
-    //            [Hammer.Press],
-    //            [Hammer.Pan]
-    //        ]
-    //    });
-    //})
+angular.module('puzzle', ['angular-gestures'])
+    .config(function (hammerDefaultOptsProvider) {
+        hammerDefaultOptsProvider.set({
+            recognizers: [
+                [Hammer.Swipe,{ direction: Hammer.DIRECTION_ALL }]
+            ]
+        });
+    })
     .controller('NumberCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
 
 
@@ -49,6 +46,9 @@ angular.module('puzzle', ['swipe'])
             simulateClick('moveRight');
         };
 
+        $scope.testSwipe= function(event){
+            console.log(event);
+        };
 
 
         $scope.size = 4;

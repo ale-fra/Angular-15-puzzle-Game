@@ -3,13 +3,14 @@
 <head>
     <title>Angular 15-Puzzle-Game</title>
     <script src="scripts/angular.min.js"></script>
+    <script src="scripts/hammer.js"></script>
     <script src="scripts/gestures.min.js"></script>
     <script src="scripts/controllers/number.js"></script>
     <link href="styles/bootstrap.css" rel="stylesheet">
     <link href="styles/basic.css" rel="stylesheet">
 </head>
 
-<body   ng-controller="NumberCtrl" ng-keydown="shortCut($event)" ng-swipe-up="swipeUP()" ng-swipe-down="swipeDown()"  ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()">
+<body   ng-controller="NumberCtrl" ng-keydown="shortCut($event)" hm-swipe-up="swipeUP()" hm-swipe-down="swipeDown()"  hm-swipe-left="swipeLeft()" hm-swipe-right="swipeRight()">
 <div class="container"   >
 
     <div class="row board board-{{size}}" ng-init="randomize()">
