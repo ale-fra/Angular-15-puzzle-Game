@@ -34,19 +34,19 @@ angular.module('puzzle', ['swipe'])
         };
 
         $scope.swipeUP = function(){
-            simulateClick('moveTop');
-        };
-
-        $scope.swipeDown = function(){
             simulateClick('moveDown');
         };
 
+        $scope.swipeDown = function(){
+            simulateClick('moveTop');
+        };
+
         $scope.swipeRight = function(){
-            simulateClick('moveRight');
+            simulateClick('moveLeft');
         };
 
         $scope.swipeLeft = function(){
-            simulateClick('moveLeft');
+            simulateClick('moveRight');
         };
 
 
