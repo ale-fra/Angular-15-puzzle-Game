@@ -1,3 +1,7 @@
+body{
+    overflow-Y: hidden;
+}
+
 .container {
     width: 500px;
 }
