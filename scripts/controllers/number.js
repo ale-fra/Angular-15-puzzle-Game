@@ -1,4 +1,14 @@
-angular.module('puzzle', [])
+angular.module('puzzle', ['swipe'])
+    //.config(function (hammerDefaultOptsProvider) {
+    //    hammerDefaultOptsProvider.set({
+    //        recognizers: [
+    //            [Hammer.Tap,{ event: 'tap'}],
+    //            [Hammer.Tap, { event: 'doubletap', taps: 2 }, [], ['tap']],
+    //            [Hammer.Press],
+    //            [Hammer.Pan]
+    //        ]
+    //    });
+    //})
     .controller('NumberCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
 
 
@@ -12,12 +22,34 @@ angular.module('puzzle', [])
             if (keyPressed === undefined) {
                 return;
             }
+            event.preventDefault();
+            simulateClick(keyPressed);
+        };
+
+        var simulateClick =function(direction){
             var possibleMovement = $scope.getMovable();
-            var toClick = possibleMovement[keyPressed]
+            var toClick = possibleMovement[direction];
             $scope.pieceClick(toClick);
             event.preventDefault();
+        };
 
-        }
+        $scope.swipeUP = function(){
+            simulateClick('moveTop');
+        };
+
+        $scope.swipeDown = function(){
+            simulateClick('moveDown');
+        };
+
+        $scope.swipeRight = function(){
+            simulateClick('moveRight');
+        };
+
+        $scope.swipeLeft = function(){
+            simulateClick('moveLeft');
+        };
+
+
 
         $scope.size = 4;
         $scope.boardIndex = [];
